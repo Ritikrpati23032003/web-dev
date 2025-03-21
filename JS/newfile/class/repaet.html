@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Rotation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .rotate {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="rotateLetter(this)"><span class="letter">A</span></div>
+
+    <script>
+        function rotateLetter(element) {
+            let letter = element.querySelector('.letter');
+            letter.classList.toggle('rotate');
+            if (letter.style.transform === "rotate(360deg)") {
+                letter.style.transform = "rotate(0deg)";
+            } else {
+                letter.style.transform = "rotate(360deg)";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+* {
+    background-color: aqua;
+}
+
+h1 {
+    background-color: blue;
+    height: 20x;
+    width: auto;
+    text-align: center;
+}
+
+button {
+    background-color: brown;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: antiquewhite;
+}
+
+div {
+    font-size: 10px;
+}
+
+.box {
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.box:hover {
+    background-color: blueviolet;
+    color: aqua;
+    text-transform: uppercase;
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(360deg);
+
+}
