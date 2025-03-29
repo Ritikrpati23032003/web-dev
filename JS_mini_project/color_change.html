@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prblem statement</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        .btn {
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            display: inline-block;
+             text-align: center;
+        }
+
+        #blue {
+            background: blue;
+        }
+
+        #yellow {
+            background: yellow;
+        }
+
+        #grey {
+            background: grey;
+        }
+
+        #green {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Colour change</h1>
+
+    <span class="btn" id="blue"></span>
+    <span class="btn" id="yellow"></span>
+    <span class="btn" id="grey"></span>
+    <span class="btn" id="green"></span>
+
+</body>
+<script>
+    const buttons=document.querySelectorAll('.btn');
+const body=document.querySelector("body")
+
+buttons.forEach(function(button){
+    console.log(button);
+    button.addEventListener('click',function(e){
+        console.log(e)
+        console.log(e.target)
+        if(e.target.id==='blue'){
+            body.style.backgroundColor=e.target.id;//blue
+        }
+        else if (e.target.id==='yellow'){
+            body.style.backgroundColor=e.target.id;//yellow
+        }
+        else if (e.target.id==='grey'){
+            body.style.backgroundColor=e.target.id;//yellow
+        }
+        else if (e.target.id==='green'){
+            body.style.backgroundColor=e.target.id;//grey
+        }
+    })
+})
+</script>
+
+</html>
